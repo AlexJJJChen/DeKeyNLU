@@ -7,7 +7,7 @@ The corpus pairs natural-language questions with gold SQL, plus structured keywo
 
 ## Highlights
 
-- **Scale:** 1501 examples (JSON list of records).
+- **Scale:** 1500 examples.
 - **Focus:** Structured annotations for question understanding (decomposition & keywording).
 - **Ready-to-Use:** Each item includes the natural-language **question**, a serialized **keywords** field, and **golden_sql**.
 - **Plug & Play:** Easily dropped into UQU → Retrieval → Generation/Refinement pipelines.
@@ -17,7 +17,7 @@ The corpus pairs natural-language questions with gold SQL, plus structured keywo
 
 - The dataset is distributed as a single file: **`DeKeyNLU.json`** (a JSON array).  
 - Each entry is a JSON object. **Common fields** present in ≥95% samples in your copy include:
-  - `Unnamed: 0`
+  - `index`
   - `question`
   - `keywords`
   - `golden_sql`
@@ -25,12 +25,12 @@ The corpus pairs natural-language questions with gold SQL, plus structured keywo
   - `_sheet` 
 
 **Observed top-level fields (sample counts):**
-- `Unnamed: 0`: 1501
-- `question`: 1501
-- `keywords`: 1501
-- `golden_sql`: 1501
-- `tester (three rounds followed by the name)`: 1501
-- `_sheet`: 1501
+- `index`: 1500
+- `question`: 1500
+- `keywords`: 1500
+- `golden_sql`: 1500
+- `tester (three rounds followed by the name)`: 1500
+- `_sheet`: 1500
 
 ### The `keywords` field
 - The `keywords` field stores a **stringified JSON-like structure** (some entries may use single quotes).  
@@ -91,7 +91,6 @@ pairs = [{"question": x.get("question", ""), "sql": x.get("golden_sql", "")} for
 ```
 
 
-
 ## Recommended Splits
 
 A common practice is to adopt **70% / 20% / 10%** for train / validation / test.
@@ -120,19 +119,6 @@ This dataset is intended for **research and non‑commercial** use.
 Unless otherwise stated by the authors/maintainers, we recommend releasing under **CC BY‑NC 4.0**.
 Please check (or provide) a `LICENSE` file in the repository root to make this explicit.
 
-
-## Citation
-
-If you use DeKeyNLU in your research or product, please cite the corresponding paper.
-
-```
-@inproceedings{dekeynlu-emnlp-2025,
-  title     = {DeKeyNLU: A Dataset for Enhancing Natural Language to SQL via Task Decomposition and Keyword Extraction},
-  author    = {<Add authors here>},
-  booktitle = {Proceedings of the EMNLP 2025},
-  year      = {2025}
-}
-```
 
 
 ## Contributing
