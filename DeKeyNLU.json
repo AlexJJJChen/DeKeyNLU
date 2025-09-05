@@ -1,13 +1,5 @@
 [
   {
-    "index": 0,
-    "question": "How many video game publishers have Interactive in their names?",
-    "keywords": "\n{\n    \"question\": \"How many video game publishers have Interactive in their names?\",\n    \"task\": [\n        \"1. Identify the video game publishers with 'Interactive' in their names\",\n        \"2. Count these publishers\"\n    ],\n    \"sub task\": [\n        \"1.1 search for video game publishers\",\n        \"1.2 filter publishers with 'Interactive' in their name\",\n        \"2.1 count the publishers identified\"\n    ],\n    \"object\": [\" publishers\"],\n    \"implementation\": [\n        {\"identify publishers name with\": \"Interactive\"}\n    ]\n}\n",
-    "golden_sql": "SELECT COUNT(T.id) FROM publisher AS T WHERE T.publisher_name LIKE '%Interactive%'",
-    "tester (three rounds followed by the name)": "zoey, jerry, cissy",
-    "_sheet": "Sheet1"
-  },
-  {
     "index": 1,
     "question": "How many acts can be found in the comedy \"Two Gentlemen of Verona\"?",
     "keywords": "\n{\n    \"question\": \"How many acts can be found in the comedy 'Two Gentlemen of Verona'?\",\n    \"task\": [\n        \"1. Confirm the role of being a professional English teacher\",\n        \"2. Determine how many acts are in the comedy 'Two Gentlemen of Verona'\"\n    ],\n    \"sub task\": [\n        \"1.1 Acknowledge the assigned role of a professional English teacher\",\n        \"2.1 Identify the number of acts in the play 'Two Gentlemen of Verona'\"\n    ],\n    \"object\": [\"acts\"],\n    \"implementation\": [\n        {\"identify\":\"comedy\"},{\"in comedy\": \"'Two Gentlemen of Verona'\"}\n    ]\n}\n",
